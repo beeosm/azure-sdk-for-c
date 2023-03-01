@@ -5,7 +5,7 @@ cmake_minimum_required (VERSION 3.10)
 
 project (az_iot_adu_test LANGUAGES C)
 
-set(CMAKE_C_STANDARD 99)
+set(CMAKE_C_STANDARD 11)
 
 include(AddCMockaTest)
 

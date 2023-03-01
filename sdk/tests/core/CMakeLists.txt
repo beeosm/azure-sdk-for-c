@@ -5,7 +5,7 @@ cmake_minimum_required (VERSION 3.10)
 
 project (az_core_test LANGUAGES C)
 
-set(CMAKE_C_STANDARD 99)
+set(CMAKE_C_STANDARD 11)
 
 include(AddCMockaTest)
 
@@ -34,7 +34,7 @@ add_cmocka_test(az_core_test SOURCES
                 test_az_url_encode.c
                 COMPILE_OPTIONS ${DEFAULT_C_COMPILE_FLAGS} ${NO_CLOBBERED_WARNING}
                 LINK_LIBRARIES ${CMOCKA_LIB} ${MATH_LIB_UNIX} az_core ${PAL} az_nohttp
-                LINK_OPTIONS ${WRAP_FUNCTIONS}  
+                LINK_OPTIONS ${WRAP_FUNCTIONS}
                 # include cmoka headers and private folder headers
                 INCLUDE_DIRECTORIES ${CMOCKA_INCLUDE_DIR} ${CMAKE_SOURCE_DIR}/sdk/src/azure/core/
                 )
