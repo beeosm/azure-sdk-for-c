@@ -535,11 +535,11 @@ AZ_NODISCARD bool az_iot_adu_client_is_component_device_update(
  * @return An #az_result value indicating the result of the operation.
  */
 AZ_NODISCARD az_result az_iot_adu_client_get_agent_state_payload(
-    az_iot_adu_client* client,
-    az_iot_adu_client_device_properties* device_properties,
+    az_iot_adu_client const* client,
+    az_iot_adu_client_device_properties const* device_properties,
     az_iot_adu_client_agent_state agent_state,
-    az_iot_adu_client_workflow* workflow,
-    az_iot_adu_client_install_result* last_install_result,
+    az_iot_adu_client_workflow const* workflow,
+    az_iot_adu_client_install_result const* last_install_result,
     az_json_writer* ref_json_writer);
 
 /**
@@ -577,7 +577,7 @@ AZ_NODISCARD az_result az_iot_adu_client_parse_service_properties(
  * @return An #az_result value indicating the result of the operation.
  */
 AZ_NODISCARD az_result az_iot_adu_client_get_service_properties_response(
-    az_iot_adu_client* client,
+    az_iot_adu_client const* client,
     int32_t version,
     az_iot_adu_client_request_decision status,
     az_json_writer* ref_json_writer);
